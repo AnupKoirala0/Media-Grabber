@@ -45,6 +45,12 @@ echo "Verifying installation..."
 yt-dlp --version
 ffmpeg -version >/dev/null
 
+
+echo "Installing Tkinter..." 
+sudo apt install python3-tk
+echo "Verifying installation..."
+apt show python3-tk
+
 echo "=================================="
 echo "Setup completed successfully!"
 echo "yt-dlp and FFmpeg are ready to use."
