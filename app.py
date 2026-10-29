@@ -7,6 +7,7 @@ import queue
 import re
 import shutil
 import subprocess
+import sys
 import tempfile
 import threading
 import time
@@ -15,6 +16,21 @@ from datetime import datetime
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
+
+PROJECT_DIR = Path(__file__).resolve().parent
+PROJECT_VENV = PROJECT_DIR / ".venv"
+PROJECT_PYTHON = PROJECT_VENV / "bin" / "python"
+
+if (
+    __name__ == "__main__"
+    and PROJECT_PYTHON.is_file()
+    and Path(sys.prefix).resolve() != PROJECT_VENV.resolve()
+):
+    os.execv(
+        str(PROJECT_PYTHON),
+        [str(PROJECT_PYTHON), str(Path(__file__).resolve()), *sys.argv[1:]],
+    )
+
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 
