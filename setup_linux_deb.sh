@@ -39,6 +39,7 @@ curl -fL
     -o "$TEMP_FILE"
 
 $SUDO install -m 755 "$TEMP_FILE" /usr/local/bin/yt-dlp
+python3 -m pip install -U yt-dlp
 
 echo "Verifying installation..."
 
