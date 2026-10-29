@@ -48,6 +48,7 @@ ffmpeg -version >/dev/null
 
 echo "Installing Tkinter..." 
 sudo apt install python3-tk
+sudo apt update && sudo apt install -y python3-tk
 echo "Verifying installation..."
 apt show python3-tk
 
