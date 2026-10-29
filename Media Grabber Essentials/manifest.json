@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Media Grabber Essentials",
+  "version": "1.0.0",
+  "description": "Shows download controls on supported video pages and communicates with a local yt-dlp server.",
+  "icons": {
+    "16": "image/logo.png",
+    "32": "image/logo.png",
+    "48": "image/logo.png",
+    "128": "image/logo.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "image/logo.png"
+  },
+  "host_permissions": [
+    "http://127.0.0.1:8765/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Local Video Format Downloader</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <img src="image/logo.png" alt="" width="44" height="44">
+        <h1>Video Downloader</h1>
+      </header>
+      <button id="toggle" type="button" role="switch" aria-checked="true" aria-label="Enable video downloader">
+        <span class="switch-track"><span class="switch-thumb"></span></span>
+        <span id="state">On</span>
+      </button>
+      <p id="description">Download controls are enabled.</p>
+      <p id="error" role="status" aria-live="polite"></p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

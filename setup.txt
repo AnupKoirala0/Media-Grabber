@@ -1,0 +1,27 @@
+Hi, Its anupkoirala0 explaining how to use this app-extension.
+
+**Local Device Setup**
+After downloading/cloning these files to your local device, 
+1. Open "setup.bat".
+("setup.bat" doesnot contains malicious files. It checks that python is downloaded or not, and if not downloaded it downloads the python with winget.
+secondly, it installs "yt-dlp" module using pip command of python.)
+
+2. Open "app.py".
+(opening "app.py" will start python in a new shell and a new interface of tkinter.
+if any of those is closed, the server gets stopped immediately. 
+you can make a shortcut of python and app.py inside your startup folder also to make it run immediately after you log in.)
+-- setup completed for local device --
+
+**Chrome Setup**
+1. Open chrome.
+2. Click on the search bar at top and search "chrome://extensions".
+3. On top right, you'll see developer mode, which is off currently. toggle it to enable it.
+4. After that, you'll get new options such as "load unpacked", "pack extension", etc. click on "load unpacked".
+5. Select the directory where you've downloaded the youtube grabber file.
+6. Select the "Media Grabber Essentials" folder and choose select button. 
+7. Congrats! you've installed the extension and loaded the server successfully.
+-- Chrome Extension Setup Complete --
+Note: If your app.py and python.exe's shortcut is not at startup folder, you have to manually open it before downloading any media.
+you can keep app.py at desktop to open it simulaneously after logging in.
+
+
